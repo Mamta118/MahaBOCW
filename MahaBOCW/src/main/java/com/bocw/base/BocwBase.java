@@ -26,7 +26,7 @@ public class BocwBase {
 	public BocwBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\mmahajan\\EclipseWorkspace\\MahaBOCW\\src\\main\\java\\com\\bocw\\config\\config.properties.bocw");
+			FileInputStream ip = new FileInputStream("C:\\Users\\mmahajan\\git\\MahaBOCW\\MahaBOCW\\src\\main\\java\\com\\bocw\\config\\config.properties.bocw");
 			prop.load(ip);		
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -52,8 +52,7 @@ public class BocwBase {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); //Press ctrl and click on Util Class name, it will redirect to Util class  
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("devUrl"));
-		
-		
+			
 	}
 }
 
